@@ -21,5 +21,6 @@ angular.module('starter.controllers', [])
     console.log("Vibrate");
     $scope.Vibrate = function() {
         alert("Vibrate On");
+        navigator.vibrate(3000);
     };
 });
