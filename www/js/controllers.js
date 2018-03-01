@@ -8,11 +8,11 @@ angular.module('starter.controllers', [])
 .controller('LightCtrl', function($scope, light) {
     console.log("Light");
     $scope.LightOn = function() {
-        console.log("Light On");
+        alert("Light On");
         window.plugins.flashlight.switchOn();
     };
     $scope.LightOff = function() {
-        console.log("Light Off");
+        alert("Light Off");
         window.plugins.flashlight.switchOff();
     };
 })
@@ -20,6 +20,6 @@ angular.module('starter.controllers', [])
 .controller('VibrateCtrl', function($scope) {
     console.log("Vibrate");
     $scope.Vibrate = function() {
-        console.log("Vibrate On");
+        alert("Vibrate On");
     };
 });
