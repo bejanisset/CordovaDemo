@@ -5,7 +5,6 @@ angular.module('starter.controllers')
     console.log('Camera');
     
     this.TakePicture = function() {
-        alert("Camera On");
         navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
     destinationType: Camera.DestinationType.FILE_URI });
 
@@ -17,6 +16,7 @@ angular.module('starter.controllers')
         function onFail(message) {
             alert('Failed because: ' + message);
         }
+        
     };
     
 });

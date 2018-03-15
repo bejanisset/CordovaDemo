@@ -31,15 +31,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
   
-    .state('app.light', {
-      url: '/Light',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/light.html',
-          controller: 'LightCtrl'
-        }
-      }
-    })
   .state('app.Vibrate', {
       url: '/Vibrate',
       views: {
@@ -60,5 +51,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
   ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/Light');
+  $urlRouterProvider.otherwise('/app/Vibrate');
 });
