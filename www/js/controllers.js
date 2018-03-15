@@ -19,15 +19,11 @@ angular.module('starter.controllers', [])
 
 .controller('VibrateCtrl', function($scope, vibration) {
     console.log("Vibrate");
-    $scope.Vibrate = function(ms) {
-        vibration.Vibrate(ms);
-    };
+    $scope.vibration = vibration;
 })
     
 .controller('CameraCtrl', function($scope, camera) {
     console.log("Vibrate");
-    $scope.Camera = function() {
-        camera.getPicture;
-    };
+    $scope.camera = camera;
     
 });
