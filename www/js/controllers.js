@@ -23,7 +23,6 @@ angular.module('starter.controllers', [])
 })
     
 .controller('CameraCtrl', function($scope, camera) {
-    console.log("Vibrate");
     $scope.camera = camera;
     
 });
