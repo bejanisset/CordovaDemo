@@ -17,10 +17,17 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('VibrateCtrl', function($scope) {
+.controller('VibrateCtrl', function($scope, vibration) {
     console.log("Vibrate");
-    $scope.Vibrate = function() {
-        alert("Vibrate On");
-        navigator.vibrate(3000);
+    $scope.Vibrate = function(ms) {
+        vibration.Vibrate(ms);
     };
+})
+    
+.controller('CameraCtrl', function($scope, camera) {
+    console.log("Vibrate");
+    $scope.Camera = function() {
+        camera.getPicture;
+    };
+    
 });
