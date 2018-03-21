@@ -10,8 +10,8 @@ angular.module('starter.controllers')
 
         function onSuccess(imageData) {
             var image =  document.getElementById('myImage') ;
-            image.src = "données : image / jpeg ; base64," + imageData;
             image.style.display = "block";
+            image.src = "data:image/jpeg;base64," + imageData;
         }
 
         function onFail(message) {
