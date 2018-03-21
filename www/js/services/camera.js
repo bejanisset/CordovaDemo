@@ -4,28 +4,19 @@ angular.module('starter.controllers')
     console.log('init service');
     console.log('Camera');
     
-    this.TakePicture = function(selection) {
+    this.TakePicture = function() {
+        navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL });
 
-    var srcType = Camera.PictureSourceType.SAVEDPHOTOALBUM;
-    var options = setOptions(srcType);
-    var func = createNewFileEntry;
+        function onSuccess(imageData) {
+            var image =  document.getElementById('myImage') ;
+            image.src = "données : image / jpeg ; base64," + imageData;
+        }
 
-    if (selection == "picker-thmb") {
-        // To downscale a selected image,
-        // Camera.EncodingType (e.g., JPEG) must match the selected image type.
-        options.targetHeight = 100;
-        options.targetWidth = 100;
-    }
-
-    navigator.camera.getPicture(function cameraSuccess(imageUri) {
-
-        var image = document.getElementById('myImage');
-        image.src = imageURI;
-
-    }, function cameraError(error) {
-        console.debug("Unable to obtain picture: " + error, "app");
-
-    }, options);
-};
+        function onFail(message) {
+            alert (' a échoué car: '+ message);
+        }
+        
+    };
     
 });
