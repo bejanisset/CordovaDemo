@@ -4,7 +4,6 @@ angular.module('starter.controllers', [])
 
 })
 
-
 .controller('VibrateCtrl', function($scope, vibration) {
     console.log("Vibrate");
     $scope.vibration = vibration;
